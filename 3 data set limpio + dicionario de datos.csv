@@ -1,0 +1,24 @@
+Campo;Tipo;Unidad;Origen;Descripción / Regla;Ejemplo / Valores
+fecha_hora;datetime;—;Original;Fecha y hora del registro (UTC o tz local según fuente).;15/01/2024 14:00
+temp_C;float;°C;Original;Temperatura instantánea/promedio horario.;26.4
+tmin;float;°C;Original;Temp. mínima del día/intervalo (si proviene del dataset).;18.2
+tmax;float;°C;Original;Temp. máxima del día/intervalo.;31.7
+precip_mm;float;mm;Original;Precipitación acumulada en el intervalo.;3.4
+snow;float;mm;Original;Nieve en mm de agua equivalente (a menudo 0 en trópico).;0.0
+wind_dir_deg;float;grados;Original;Dirección del viento (0–360°, 0=N).;135
+wind_speed_mps;float;m/s;Original;Velocidad del viento.;6.2
+wpgt;float;m/s;Original;Ráfaga máxima (wind gust).;12.8
+pressure_hPa;float;hPa;Original;Presión a nivel del mar (MSLP).;1013.2
+departamento;string;—;Original;Departamento/Región (Bolivia).;beni
+humidity_pct;float;%;Original;Humedad relativa.;72.0
+temp_category / temperatura;category;—;Derivada;"Clasificación por °C: Muy fría <0; Fría 0–10; Templada 10–20; Cálida 20–30; Calurosa >30.";Cálida
+rain_category / precipitacion;category;—;Derivada;"Por mm: Sin lluvia (=0); Ligera 0–5; Moderada 5–20; Intensa 20–50; Tormenta >50.";Ligera
+wind_category / velocidad_del_viento;category;—;Derivada;"Beaufort (m/s) resumido: Calma ?0.2; Ventolina ?1.5; Brisa ligera ?3.3; Brisa suave ?5.4; Brisa moderada ?7.9; Brisa fresca ?10.7; Brisa fuerte ?13.8; Viento duro ?17.1; Temporal ?20.7; Temporal fuerte ?24.4; Temporal duro ?28.4; Borrasca violenta ?32.6; Huracán >32.6.";Brisa fresca
+pressure_category / presion_atmosferica;category;—;Derivada;"Baja <1000; Normal 1000–1020; Alta >1020.";Presión normal
+year / año;int;—;Derivada;Año de fecha_hora.;2024
+month / mes;int;—;Derivada;Mes (1–12).;7
+day / dia;int;—;Derivada;Día del mes (1–31).;15
+weekday / dia_de_la_semana;string;—;Derivada;Nombre del día.;Lunes
+season / estacion / estacion_del_año;category;—;Derivada;"Hemisferio sur: Verano Dic–Feb; Otoño Mar–May; Invierno Jun–Ago; Primavera Sep–Nov.";Verano
+hour;int;h;Derivada;Hora 0–23.;14
+day_period / momento_del_dia;category;—;Derivada;"Madrugada 0–6; Mañana 6–12; Tarde 12–18; Noche 18–24.";Tarde
